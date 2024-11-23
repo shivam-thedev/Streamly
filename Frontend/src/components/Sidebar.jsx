@@ -1,57 +1,57 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { HomeIcon, LikedIcon, HistoryIcon, SubscriptionsIcon, DashboardIcon, YourChannelIcon, SupportIcon} from "./Icons";
+
+const upperLinks = [
+  { name: "Home", to: "/", Icon: HomeIcon },
+  { name: "Liked Videos", to: "/liked-videos", Icon: LikedIcon },
+  { name: "History", to: "/history", Icon: HistoryIcon },
+  { name: "Subscriptions", to: "/subscriptions", Icon: SubscriptionsIcon },
+  
+];
+
+const belowLinks = [
+  { name: "Dashboard", to: "/dashboard", Icon: DashboardIcon },
+  { name: "Your Channel", to: "/your-channel", Icon: YourChannelIcon },
+  { name: "Support", to: "/support", Icon: SupportIcon },
+]
 
 export default function Sidebar() {
   return (
     <div className="h-[880px] bg-transparent border-r-2 border-zinc-600 w-[250px] flex flex-col justify-between">
-        <div className="flex flex-col gap-2 p-3">
-            <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-zinc-700">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
-                    <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.45" d="M9.062 4.826L3.239 9.921c-.5.437-.164 1.213.523 1.213c.42 0 .761.315.761.703v3.244c0 2.79 0 4.185.939 5.052C6.4 21 7.91 21 10.932 21h2.136c3.021 0 4.532 0 5.47-.867c.939-.867.939-2.262.939-5.052v-3.244c0-.388.34-.703.76-.703c.688 0 1.023-.776.524-1.213l-5.823-5.095C13.547 3.61 12.851 3 12 3s-1.547.609-2.938 1.826M12 16h.009" color="#2563eb" />
-                </svg>
-                <p className="text-xl font-semibold">Home</p>
-            </div>
-            <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-zinc-700">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
-	<path fill="white" fill-rule="evenodd" d="M12.438 2.778a.6.6 0 0 0-.438.03a.52.52 0 0 0-.28.33l-.476 1.834a8.4 8.4 0 0 1-.72 1.844c-.485.907-1.218 1.604-1.898 2.19l-1.438 1.24a.92.92 0 0 0-.315.774l.812 9.393a.916.916 0 0 0 .911.837h4.649c3.136 0 5.779-2.182 6.286-5.113l.705-4.08a.916.916 0 0 0-.901-1.073h-5.181c-.977 0-1.72-.876-1.562-1.84l.663-4.044a4 4 0 0 0-.076-1.664a.89.89 0 0 0-.596-.611zl.23-.714zm-1.09-1.321a2.1 2.1 0 0 1 1.549-.107l.145.047l-.23.714l.23-.714c.777.25 1.383.87 1.589 1.662c.193.746.229 1.524.104 2.284l-.663 4.044a.083.083 0 0 0 .082.097h5.18c1.5 0 2.636 1.352 2.38 2.829l-.705 4.08c-.638 3.688-3.938 6.357-7.764 6.357H8.596a2.416 2.416 0 0 1-2.405-2.208l-.813-9.393a2.42 2.42 0 0 1 .83-2.04l1.44-1.24c.655-.564 1.206-1.111 1.552-1.76a6.8 6.8 0 0 0 .592-1.514l.476-1.833a2.01 2.01 0 0 1 1.08-1.305m-8.38 8.028a.75.75 0 0 1 .78.685l.97 11.236a1.237 1.237 0 1 1-2.468.107V10.234a.75.75 0 0 1 .718-.75" clip-rule="evenodd" />
-</svg>
-                <p className="text-xl font-semibold">Liked Videos</p>
-            </div>
-            <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-zinc-700">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
-	<path fill="white" fill-rule="evenodd" d="M11.25 2a.75.75 0 0 1 .75-.75c5.937 0 10.75 4.813 10.75 10.75S17.937 22.75 12 22.75S1.25 17.937 1.25 12a.75.75 0 0 1 1.5 0A9.25 9.25 0 1 0 12 2.75a.75.75 0 0 1-.75-.75M12 8.25a.75.75 0 0 1 .75.75v3.25H16a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75V9a.75.75 0 0 1 .75-.75M9.1 2.398a.75.75 0 0 1-.43.97a9 9 0 0 0-.42.173a.75.75 0 1 1-.608-1.37q.24-.108.488-.203a.75.75 0 0 1 .97.43M5.648 4.24a.75.75 0 0 1-.026 1.06a9 9 0 0 0-.321.322a.75.75 0 1 1-1.087-1.035q.183-.19.373-.373a.75.75 0 0 1 1.06.026M3.16 7.261a.75.75 0 0 1 .381.99q-.092.207-.174.419a.75.75 0 0 1-1.399-.54q.094-.247.202-.488a.75.75 0 0 1 .99-.381" clip-rule="evenodd" />
-</svg>
-                <p className="text-xl font-semibold">History</p>
-            </div>
-            <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-zinc-700">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
-	<path fill="white" d="M4.616 21q-.691 0-1.153-.462T3 19.385v-8.77q0-.69.463-1.152T4.615 9h14.77q.69 0 1.152.463T21 10.616v8.769q0 .69-.463 1.153T19.385 21zm5.884-2.923L15.116 15L10.5 11.923zm-6-10.846v-1h15v1zm3-2.77v-1h9v1z" />
-</svg>
-                <p className="text-xl font-semibold">Subscriptions</p>
-            </div>
-        </div>
-        <div className="p-5">
-            <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-zinc-700">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
-	<path fill="white" d="M3 12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1zm0 8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1zm10 0a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1zm1-17a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1z" />
-</svg>
-                <p className="text-xl font-semibold">Dashboard</p>
-            </div>
-            <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-zinc-700">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
-	<path fill="white" d="M16.088 6.412a2.84 2.84 0 0 0-1.347-.955l-1.378-.448a.544.544 0 0 1 0-1.025l1.378-.448A2.84 2.84 0 0 0 16.5 1.774l.011-.034l.448-1.377a.544.544 0 0 1 1.027 0l.447 1.377a2.84 2.84 0 0 0 1.799 1.796l1.377.448l.028.007a.544.544 0 0 1 0 1.025l-1.378.448a2.84 2.84 0 0 0-1.798 1.796l-.448 1.377l-.013.034a.544.544 0 0 1-1.013-.034l-.448-1.377a2.8 2.8 0 0 0-.45-.848m7.695 3.801l-.766-.248a1.58 1.58 0 0 1-.998-.999l-.25-.764a.302.302 0 0 0-.57 0l-.248.764a1.58 1.58 0 0 1-.984.999l-.765.248a.302.302 0 0 0 0 .57l.765.249a1.58 1.58 0 0 1 1 1.002l.248.764a.302.302 0 0 0 .57 0l.249-.764a1.58 1.58 0 0 1 .999-.999l.765-.248a.302.302 0 0 0 0-.57zM12.072 4H4.25A2.25 2.25 0 0 0 2 6.25v11.505a2.25 2.25 0 0 0 2.25 2.25h15.495a2.25 2.25 0 0 0 2.25-2.25v-3.822a1.29 1.29 0 0 1-1.5-.314v4.136a.75.75 0 0 1-.75.75l-2.751-.001V15.75l-.005-.143A1.75 1.75 0 0 0 15.245 14H8.75l-.144.006A1.75 1.75 0 0 0 7 15.75l-.001 2.754H4.25a.75.75 0 0 1-.75-.75V6.25a.75.75 0 0 1 .75-.75h8.123a2 2 0 0 1-.093-.141A1.57 1.57 0 0 1 12.072 4M15 10a3 3 0 1 0-6 0a3 3 0 0 0 6 0" />
-</svg>
-                <p className="text-xl font-semibold">Your Channel</p>
-            </div>
-            <div className="flex items-center gap-4 p-3 rounded-lg hover:bg-zinc-700">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 48 48">
-	<g fill="white">
-		<path fill-rule="evenodd" d="M24.8 33h2.7C34.404 33 40 27.404 40 20.5S34.404 8 27.5 8h-7C13.596 8 8 13.596 8 20.5c0 8.06 4.596 12.88 9.43 15.786c2.426 1.458 4.87 2.4 6.717 2.977q.341.107.653.197zm2 9s-.764-.129-2-.463C19.59 40.125 6 35.05 6 20.5C6 12.492 12.492 6 20.5 6h7C35.508 6 42 12.492 42 20.5S35.508 35 27.5 35h-.7z" clip-rule="evenodd" />
-		<path fill-rule="evenodd" d="M27.691 12.482c1.03.684 1.806 1.793 1.806 3.28c0 1.578-.636 2.738-1.667 3.448a4.5 4.5 0 0 1-1.33.614v1.532a1.5 1.5 0 0 1-3 0v-2.797a1.5 1.5 0 0 1 1.4-1.497c.554-.037.974-.147 1.227-.322a.7.7 0 0 0 .24-.272c.06-.12.13-.334.13-.707c0-.312-.122-.552-.467-.782c-.392-.26-1.022-.452-1.779-.476c-.748-.024-1.475.122-2.01.381c-.536.26-.733.552-.788.767a1.5 1.5 0 1 1-2.906-.746c.345-1.341 1.348-2.217 2.386-2.72c1.04-.505 2.263-.718 3.413-.681c1.143.036 2.363.324 3.345.978" clip-rule="evenodd" />
-		<path d="M27 27a2 2 0 1 1-4 0a2 2 0 0 1 4 0" />
-	</g>
-</svg>
-                <p className="text-xl font-semibold">Support</p>
-            </div>
-        </div>
+      <div className="flex flex-col gap-2 p-3">
+        {upperLinks.map((link) => (
+          <NavLink
+            key={link.name}
+            to={link.to}
+            className={({ isActive }) =>
+              `flex items-center gap-4 p-3 rounded-lg ${
+                isActive ? "bg-zinc-700" : "hover:bg-zinc-700"
+              }`
+            }
+          >
+            <link.Icon />
+            <p className="text-xl font-semibold">{link.name}</p>
+          </NavLink>
+        ))}
+      </div>
+      <div className="flex flex-col gap-1 p-5">
+        {belowLinks.map((link) => (
+          <NavLink
+            key={link.name}
+            to={link.to}
+            className={({ isActive }) =>
+              `flex items-center gap-4 p-3 rounded-lg ${
+                isActive ? "bg-zinc-700" : "hover:bg-zinc-700"
+              }`
+            }
+          >
+            <link.Icon />
+            <p className="text-xl font-semibold">{link.name}</p>
+          </NavLink>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
+

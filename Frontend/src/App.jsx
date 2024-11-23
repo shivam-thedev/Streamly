@@ -1,14 +1,17 @@
-import { Outlet } from "react-router-dom"
+
 import Navbar from "./components/Navbar"
 import Sidebar from "./components/Sidebar"
+import { Main } from "./components"
 
 
 export default function App() {
   return (
-    <div>
+    <div className="flex flex-col h-screen ">
       <Navbar />
-      <Sidebar/>
-      {/* <Outlet /> */}
+      <div className="flex">
+        <Sidebar/>
+        <Main/>
+      </div>
     </div>
   )
 }

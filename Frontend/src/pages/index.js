@@ -1,0 +1,9 @@
+export { default as Dashboard } from './Dashboard.jsx';
+export { default as History } from './History.jsx';
+export { default as Home } from './Home.jsx';
+export { default as LikedVideos } from './LikedVideos.jsx';
+export { default as Login } from './Login.jsx';
+export { default as Signup } from './Signup.jsx';
+export { default as Subscriptions } from './Subscriptions.jsx';
+export { default as Support } from './Support.jsx';
+export { default as YourChannel } from './YourChannel.jsx';
