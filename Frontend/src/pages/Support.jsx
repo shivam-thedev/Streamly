@@ -25,7 +25,7 @@ export default function Support() {
                 </p>
                 <a href="https://linkedin.com/in/shivam-coder/" target="_blank" 
                   className="text-blue-500 underline hover:text-blue-700">
-                    linkedin.com/in/shivam-coder/
+                    linkedin.com/in/shivam-coder
                 </a>
             </div>
         </div>
