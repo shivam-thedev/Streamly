@@ -54,12 +54,12 @@ userSchema.pre("save",async function(next){
 })
 
 // Method to check password
-userSchema.method.isPasswordCorrect = async function(password){
+userSchema.methods.isPasswordCorrect = async function(password){
     return bcrypt.compare(password,this.password)
 }
 
 // Method to generate access token
-userSchema.method.generateAccessToken = function(){
+userSchema.methods.generateAccessToken = function(){
     return jwt.sign(
         {
             _id:this._id,
@@ -75,14 +75,14 @@ userSchema.method.generateAccessToken = function(){
 }
 
 // Method to generate to refresh Token
-userSchema.method.generateRefreshToken = function(){
+userSchema.methods.generateRefreshToken = function(){
     return jwt.sign(
         {
             _id:this._id
         },
         process.env.REFRESH_TOKEN_SECRET,
         {
-            expiresIn:REFRESH_TOKEN_EXPIRY
+            expiresIn:process.env.REFRESH_TOKEN_EXPIRY
         }
     )
 }
